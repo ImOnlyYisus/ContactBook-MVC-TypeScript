@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <i class="fa-sharp fa-solid fa-folder-open"></i>
+            <h1>Contact book</h1>
+        </div>
+    </header>
+    <main>
+        <section id="contacts" class="contacts">
+        </section>
+        <section class=" forms">
+            <div class="contact-form">
+                <legend>Insertar</legend>
+                <label for="nameInsert">Nombre</label>
+                <input type="text" name="name" id="nameInsert">
+                <label for="surnameInsert">Apellido</label>
+                <input type="text" name="surname" id="surnameInsert">
+                <label for="emailInsert">Email</label>
+                <input type="date" name="date" id="dateInsert">
+                <label for="phoneInsert">Teléfonos</label>
+                <input type="tel" name="phone" id="phoneInsert">
+                <label for="imageInsert">Imagen (url)</label>
+                <input type="text" name="image" id="imageInsert">
+                <div><span id="insert" class="btn btn-primary">Añadir</span></div>
+            </div>
+            <div class="contact-form disabled">
+                <legend>Actualizar</legend>
+                <label for="nameUpdate">Nombre</label>
+                <input type="text" name="name" id="nameUpdate">
+                <label for="surnameUpdate">Apellido</label>
+                <input type="text" name="surname" id="surnameUpdate">
+                <label for="emailUpdate">Email</label>
+                <input type="date" name="date" id="dateUpdate">
+                <label for="phoneUpdate">Teléfonos</label>
+                <input type="tel" name="phone" id="phoneUpdate">
+                <label for="imageUpdate">Imagen (url)</label>
+                <input type="text" name="image" id="imageUpdate">
+                <div><span id="insert" class="btn btn-secondary">Actualizar</span></div>
+            </div>
+        </section>
+    </main>
+</body>
+<link rel="stylesheet" href="css/style.min.css">
+<script src="bundle.js"></script>
+<script src="https://kit.fontawesome.com/e929df1d66.js" crossorigin="anonymous"></script>
+
+</html>
