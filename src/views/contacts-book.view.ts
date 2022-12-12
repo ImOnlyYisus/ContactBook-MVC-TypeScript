@@ -49,6 +49,12 @@ export class ContactsBookView {
                 image: image.value
             };
             addContact(newPerson);
+
+            this.insert.name.value = "";
+            this.insert.surname.value = "";
+            this.insert.dateOfBirth.value = "";
+            this.insert.phones.value = "";
+            this.insert.image.value = "";
         })
     }
 
