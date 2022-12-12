@@ -1,12 +1,12 @@
 export class Person {
-    private id: number;
+    private id: string;
     private name: string;
     private surname: string;
     private dateOfBirth: Date;
     private phones: string[];
     private image: string;
 
-    constructor(id: number, name: string, surname: string, dateOfBirth: Date, phones: string[], image: string) {
+    constructor(id: string, name: string, surname: string, dateOfBirth: Date, phones: string[], image: string) {
         this.id = id;
         this.name = name;
         this.surname = surname;

@@ -5,10 +5,28 @@ import { ContactsBookView } from "../views/contacts-book.view";
 export class ContactsBookController {
 
     constructor(private readonly contactsBookView: ContactsBookView, private readonly contactsBookService: ContactsBookService) {
-        this.onLoadContacts(this.contactsBookService._contacts);
+        this.renderContact();
+        this.contactsBookView.bindAdd(this.handlerAdd);
+        this.contactsBookView.bindUpdate(this.handlerUpdate);
     }
 
-    private onLoadContacts = (persons: Person[]) => {
-        this.contactsBookView.render(persons);
+    private handlerAdd = (addContact) => {
+        this.contactsBookService.add(addContact);
+        this.renderContact();
+    }
+    private handlerDelete = (deleteContact) => {
+        this.contactsBookService.delete(deleteContact);
+        this.renderContact();
+    }
+
+    private handlerUpdate = (updateContact) => {
+        this.contactsBookService.update(updateContact);
+        this.renderContact();
+    }
+
+    private renderContact = () => {
+        this.contactsBookView.render(this.contactsBookService._contacts);
+        this.contactsBookView.bindDelete(this.handlerDelete);
+        this.contactsBookView.bindIconUpdate();
     }
 }

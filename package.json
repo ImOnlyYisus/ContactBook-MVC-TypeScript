@@ -39,5 +39,9 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "sweetalert2": "^11.6.15",
+    "uuid": "^9.0.0"
   }
 }
