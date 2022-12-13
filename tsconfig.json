@@ -1,21 +1,30 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "noImplicitAny": false,
-        "module": "commonjs",
-        "target": "ES2015",
-        "allowJs": true,
-        "skipDefaultLibCheck": true,
-        "skipLibCheck": true,
-        "sourceMap": true,
-        "moduleResolution": "node",
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "moduleResolution": "Node",
+        "strict": false,
+        "resolveJsonModule": true,
         "esModuleInterop": true,
-        "resolveJsonModule": true
+        "isolatedModules": true,
+        "noEmit": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true
     },
     "include": [
-        "**/*.ts"
+        "src/*.ts"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "vite",
+        "dist"
     ]
 }
