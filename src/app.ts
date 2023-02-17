@@ -6,7 +6,6 @@ const contactsBookService = new ContactsBookService();
 const contactsBookView = new ContactsBookView();
 
 (async () => {
-
     await contactsBookService.loadContacts();
 
     new ContactsBookController(contactsBookView, contactsBookService);
